@@ -11,7 +11,11 @@ class C_Home extends CI_Controller
 
     public function loadHome()
     {
+        //to show heroes (decoded)
+        $hero = file_get_contents('https://api.opendota.com/api/heroes');
+        $this->data['hero'] = json_decode($hero);
+
         $this->load->view('addOnInit');
-        $this->load->view('home');
+        $this->load->view('home',$this->data);
     }
 }
