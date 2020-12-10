@@ -6,3 +6,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['home'] = 'C_Home/loadHome';
+$route['heroes'] = 'C_Home/loadHero';
+
+$route['searchByID'] = 'C_Statistic/findUserByID';
+$route['changeID'] = 'C_Statistic/changeID';

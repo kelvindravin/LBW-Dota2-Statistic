@@ -1,8 +1,8 @@
 <html>
+<footer class="footer mt-auto p-3">
+    <div class="footer-copyright text-center">
+        © Copyright: Kelompok A - LBW
+    </div>
+</footer>
 
-        <div class="p-3 bg-dark text-white">
-            <div class="footer-copyright text-center">
-                © Copyright: Kelompok A - LBW
-            </div>
-        </div>
 </html>
