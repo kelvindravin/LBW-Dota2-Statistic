@@ -15,7 +15,9 @@ class C_Home extends CI_Controller
         $hero = file_get_contents('https://api.opendota.com/api/heroes');
         $this->data['hero'] = json_decode($hero);
 
-        $this->load->view('addOnInit');
+        $this->load->view('header');
+        $this->load->view('navbar');
         $this->load->view('home',$this->data);
+        $this->load->view('footer');
     }
 }
