@@ -19,7 +19,7 @@ class C_Statistic extends CI_Controller
         // check if userID is valid or not
         if (array_key_exists("profile", $user_data)) {
             $this->session->set_userdata('user_data', $user_data);
-            $this->loadMatches();
+            redirect(base_url("matches"));
         } else {
             $this->session->set_flashdata('error', 'Steam Player ID tidak terdaftar!');
             redirect(base_url());
