@@ -39,7 +39,7 @@
 
             <div class="mt-5">
                 <h4 class="text-center">Cari Steam PlayerID Berdasarkan Dota 2 Persona Name</h4>
-                <form action="searchByPersona" class="text-center mt-3" enctype="multipart/form-data" method="post">
+                <form action="searchByPersonaName" class="text-center mt-3" enctype="multipart/form-data" method="post">
                     <input type="text" id="playerpersona" name="playerpersona" placeholder="Dota 2 Persona Name">
                     <input type="submit" value="Cari">
                 </form>

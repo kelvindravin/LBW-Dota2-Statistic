@@ -10,3 +10,4 @@ $route['heroes'] = 'C_Home/loadHero';
 
 $route['searchByID'] = 'C_Statistic/findUserByID';
 $route['changeID'] = 'C_Statistic/changeID';
+$route['searchByPersonaName']= 'C_Search_by_name';
