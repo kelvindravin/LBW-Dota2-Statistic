@@ -44,7 +44,7 @@
                 </tbody>
             </table>
         </div>
-    </content>
+    
 </body>
 <script type="text/javascript">
     $(document).ready(function() {

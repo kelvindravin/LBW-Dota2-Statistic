@@ -14,7 +14,7 @@
         <br>
         <div class="col justify-content-center">
             <table id = "tablePersonaName" class="table table-striped table-bordered">
-                <thead></thead>
+                <thead>
                     <tr>
                         <th>Persona Name</th>
                         <th>Profile Picture</th>
@@ -28,11 +28,11 @@
                     for ($i=0;$i<30;$i++){ ?>
                     <tr>
                         <td>Johny</td>
-                        <td></td>
+                        <td>hello</td>
                         <td>2020-10-12</td>
                         <td>166168145</td>
                         <td>Lihat Statistik</td>
-                    <tr>
+                    </tr>
                     <?php }?>
                 </tbody>
             </table>
