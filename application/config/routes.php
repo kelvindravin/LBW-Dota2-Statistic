@@ -9,6 +9,9 @@ $route['home'] = 'C_Home/loadHome';
 $route['heroes'] = 'C_Home/loadHero';
 
 $route['searchByID'] = 'C_Statistic/findUserByID';
-$route['changeID'] = 'C_Statistic/changeID';
-$route['searchByPersonaName']= 'C_Search_by_name/index';
+
+$route['searchByPersonaName']= 'C_Search_by_name/loadSearchByName';
+$route['selectSteamID'] = 'C_Search_by_name/findUserByPersonaName';
+
 $route['matches'] = 'C_Statistic/loadMatches';
+$route['changeID'] = 'C_Statistic/changeID';
