@@ -28,7 +28,7 @@
                     for ($i=0;$i<30;$i++){ ?>
                     <tr>
                         <td>Johny</td>
-                        <td>hello</td>
+                        <td><?=$i?></td>
                         <td>2020-10-12</td>
                         <td>166168145</td>
                         <td>Lihat Statistik</td>
