@@ -15,3 +15,5 @@ $route['selectSteamID'] = 'C_Search_by_name/findUserByPersonaName';
 
 $route['matches'] = 'C_Statistic/loadMatches';
 $route['changeID'] = 'C_Statistic/changeID';
+
+$route['stats'] = 'C_Statistic/loadStats';

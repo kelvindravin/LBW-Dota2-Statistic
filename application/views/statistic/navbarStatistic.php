@@ -13,10 +13,14 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo site_url('home')?>">Matches</a>
+                        <a class="nav-link <?php if ($current_nav == "matches") {
+                                            echo " active";
+                                        } ?>" href="<?php echo site_url('matches')?>">Matches</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo site_url('stats')?>">Stats</a>
+                        <a class="nav-link <?php if ($current_nav == "stats") {
+                                            echo " active";
+                                        } ?>" href="<?php echo site_url('stats')?>">Stats</a>
                     </li>
                 </ul>
             </div>
