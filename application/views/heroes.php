@@ -24,9 +24,9 @@
             }
         $rowCount++; ?>
         <div class="col-md-<?php echo $bootstrapColWidth; ?>">
-        <div class="thumbnail card mx-5 text-center">
+        <div class="thumbnail card mx-5 text-center py-2">
             <?php 
-                echo '<img src="./assets/images/'.$value->name.'.jpg" style="margin: 0 auto; width=128px; height=72px; "> <br> '. 
+                echo '<img src="./assets/images/'.$value->name.'.jpg" style="margin: 0 auto; width=128px; height=72px;"> <br> '. 
                 $value->localized_name.' <br> '.
                 $value->primary_attr.' <br> '.
                 $value->attack_type.' <br> '.
