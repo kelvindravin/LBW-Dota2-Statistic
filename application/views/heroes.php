@@ -14,46 +14,30 @@
     </header>
 
     <content>
-        <div class="container-fluid my-5">
-            <table id="table_heroes" class="table table-striped table-bordered  nowrap" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>Hero ID</th>
-                        <th>Hero Picture</th>
-                        <th>Dota2 Name</th>
-                        <th>Primary Attribute</th>
-                        <th>Attack Type</th>
-                        <th>Roles</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    foreach ($hero as $key => $value) {
-                        echo '
-                        <tr>
-                            <td>' . $value->id . '</td>
-                            <td>' . $value->name . '</td>
-                            <td>' . $value->localized_name . '</td>
-                            <td>' . $value->primary_attr . '</td>
-                            <td>' . $value->attack_type . '</td>
-                            <td>' . implode(', ', $value->roles) . '</td>
-                        </tr>
-                    ';
-                    }
-                    ?>
-                </tbody>
-            </table>
+    <?php
+        $numOfCols = 3;
+        $rowCount = 0;
+        $bootstrapColWidth = 12 / $numOfCols;
+        foreach ($hero as $key => $value) {
+            if($rowCount % $numOfCols == 0) { 
+                ?> <div class="row"> <?php 
+            }
+        $rowCount++; ?>
+        <div class="col-md-<?php echo $bootstrapColWidth; ?>">
+        <div class="thumbnail">
+            <?php 
+                echo $value->name.' <br> '. 
+                $value->localized_name.' <br> '.
+                $value->primary_attr.' <br> '.
+                $value->attack_type.' <br> '.
+                implode(', ', $value->roles)
+            ?>
         </div>
-    
+        </div>
+        <?php
+            if($rowCount % $numOfCols == 0) { ?> </div> <?php } } 
+        ?>
+    </content>
 </body>
-<script type="text/javascript">
-    $(document).ready(function() {
-        var table = $('#table_heroes').DataTable({
-            responsive: true
-        });
-
-        new $.fn.dataTable.FixedHeader(table);
-    });
-</script>
 
 </html>
