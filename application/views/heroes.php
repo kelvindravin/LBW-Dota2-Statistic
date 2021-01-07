@@ -20,13 +20,13 @@
         $bootstrapColWidth = 12 / $numOfCols;
         foreach ($hero as $key => $value) {
             if($rowCount % $numOfCols == 0) { 
-                ?> <div class="row"> <?php 
+                ?> <div class="row my-5 mx-5"> <?php 
             }
         $rowCount++; ?>
         <div class="col-md-<?php echo $bootstrapColWidth; ?>">
-        <div class="thumbnail">
+        <div class="thumbnail card mx-5 text-center">
             <?php 
-                echo $value->name.' <br> '. 
+                echo '<img src="./assets/images/'.$value->name.'.jpg" style="margin: 0 auto; width=128px; height=72px; "> <br> '. 
                 $value->localized_name.' <br> '.
                 $value->primary_attr.' <br> '.
                 $value->attack_type.' <br> '.
