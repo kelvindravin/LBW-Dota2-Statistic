@@ -12,8 +12,8 @@
             <h1 class="text-center">Pencarian untuk Persona name dota 2 </h1>
         </div>
         <br>
-        <div class="col justify-content-center">
-            <table id = "tablePersonaName" class="table table-striped table-bordered">
+        <div class="justify-content-center">
+            <table id = "tablePersonaName" class="table table-striped table-bordered nowrap">
                 <thead>
                     <tr>
                         <th>Persona Name</th>
@@ -25,13 +25,18 @@
                 </thead>
                 <tbody>
                     <?php 
-                    for ($i=0;$i<30;$i++){ ?>
+                    foreach(json_decode($result) as $row){ ?>
                     <tr>
-                        <td>Johny</td>
-                        <td><?=$i?></td>
-                        <td>2020-10-12</td>
-                        <td>166168145</td>
-                        <td>Lihat Statistik</td>
+                        <td><?=$row->personaname?></td>
+                        <td style="padding:0"><img src ="<?=$row->avatarfull?>" class="img-fluid mx-auto d-block" ></td>
+                        <td><?=empty($row->last_match_time)?'tidak tersedia':date_format(new DateTime($row->last_match_time),'Y-m-d H:i:s')?></td>
+                        <td><?=$row->account_id?></td>
+                        <td>
+                        <form id ="formSearchById" action="searchByID" enctype="multipart/form-data" method="post">
+                            <input type="hidden" value="<?=$row->account_id?>" name="playerid">
+                            <a id="submit" href="#" onclick="document.getElementById('formSearchById').submit();">Lihat Statistik</a>
+                        </form>
+                        </td>
                     </tr>
                     <?php }?>
                 </tbody>
@@ -40,12 +45,16 @@
     </div>    
     <script type="text/javascript">
 
-        $(document).ready(function() {
+    $(document).ready(function() {
         var table = $('#tablePersonaName').DataTable({
+            order:[],
             responsive: true
         });
-
         new $.fn.dataTable.FixedHeader(table);
+
+        document.getElementById('submit').onClick(function(e){
+            e.preventDefault();
+        });
     });
     </script>
 </body>
