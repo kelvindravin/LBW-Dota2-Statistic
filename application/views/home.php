@@ -30,9 +30,9 @@
             </p>
 
             <div class="mt-5">
-                <h4 class="text-center">Cari Player Berdasarkan Steam PlayerID</h4>
+                <h4 class="text-center">Cari Player Berdasarkan Dota 2 PlayerID</h4>
                 <form action="searchByID" class="text-center mt-3" enctype="multipart/form-data" method="post">
-                    <input type="text" id="playerid" name="playerid" placeholder="Steam Player ID">
+                    <input type="text" id="playerid" name="playerid" placeholder="Dota 2 Player ID" required>
                     <input type="submit" value="Cari">
                 </form>
             </div>
@@ -40,7 +40,7 @@
             <div class="mt-5">
                 <h4 class="text-center">Cari Steam PlayerID Berdasarkan Dota 2 Persona Name</h4>
                 <form action="searchByPersonaName" class="text-center mt-3" enctype="multipart/form-data" method="post">
-                    <input type="text" id="playerpersona" name="playerpersona" placeholder="Dota 2 Persona Name">
+                    <input type="text" id="playerpersona" name="playerpersona" placeholder="Dota 2 Persona Name" required>
                     <input type="submit" value="Cari">
                 </form>
             </div>

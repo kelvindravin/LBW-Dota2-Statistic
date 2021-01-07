@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <title>Dota 2 Statistics - Persona Name</title>
 </head>
+
 <body>
-    <div class="container">
-        <br>
-        <div class="col">
-            <h1 class="text-center">Pencarian untuk Persona name dota 2 </h1>
-        </div>
-        <br>
-        <div class="justify-content-center">
-            <table id = "tablePersonaName" class="table table-striped table-bordered nowrap">
+    <header>
+        <h1 class="text-center">
+            Pencarian untuk Player Dota 2, Dengan Nama <span class="text-warning"><?php echo $persona_searched; ?></span>
+        </h1>
+    </header>
+    <content>
+        <div class="container my-5">
+            <table id="tablePersonaName" class="table table-striped table-bordered  nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>Persona Name</th>
@@ -25,7 +26,7 @@
                 </thead>
                 <tbody>
                     <?php 
-                    foreach(json_decode($result) as $row){ ?>
+                    foreach($persona_data as $row){ ?>
                     <tr>
                         <td><?=$row->personaname?></td>
                         <td style="padding:0"><img src ="<?=$row->avatarfull?>" class="img-fluid mx-auto d-block" ></td>
@@ -42,7 +43,7 @@
                 </tbody>
             </table>
         </div>
-    </div>    
+    </content>
     <script type="text/javascript">
 
     $(document).ready(function() {
@@ -58,4 +59,5 @@
     });
     </script>
 </body>
+
 </html>

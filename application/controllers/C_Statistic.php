@@ -32,16 +32,38 @@ class C_Statistic extends CI_Controller
         redirect(base_url());
     }
 
-    public function loadMatches(){
+    public function loadMatches()
+    {
         $data = $this->session->userdata('user_data');
         $id = $data["profile"]["account_id"];
+        $this->data['current_nav'] = "matches";
 
         $response = file_get_contents('https://api.opendota.com/api/players/' . $id . '/matches');
         $this->data['matches'] = json_decode($response, true);
-        if (sizeof($this->data['matches'])>0) {
+        if (sizeof($this->data['matches']) > 0) {
             $this->load->view('header');
-            $this->load->view('statistic/navbarStatistic');
-            $this->load->view('statistic/match',$this->data);
+            $this->load->view('statistic/navbarStatistic',$this->data);
+            $this->load->view('statistic/match', $this->data);
+            $this->load->view('footer');
+        } else {
+            $this->session->set_flashdata('error', 'Data match tidak ditemukan!');
+            redirect(base_url());
+        }
+    }
+
+    public function loadStats()
+    {
+        $data = $this->session->userdata('user_data');
+        $id = $data["profile"]["account_id"];
+        $this->data['current_nav'] = "stats";
+
+        $response = file_get_contents('https://api.opendota.com/api/players/' . $id . '/totals');
+
+        $this->data['stats'] = json_decode($response, true);
+        if (sizeof($this->data['stats']) > 0) {
+            $this->load->view('header');
+            $this->load->view('statistic/navbarStatistic', $this->data);
+            $this->load->view('statistic/stats', $this->data);
             $this->load->view('footer');
         } else {
             $this->session->set_flashdata('error', 'Data match tidak ditemukan!');
