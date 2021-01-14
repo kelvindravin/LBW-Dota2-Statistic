@@ -47,18 +47,7 @@
                 order:[],
                 responsive: true
             });
-
-    $(document).ready(function() {
-        var table = $('#tablePersonaName').DataTable({
-            order:[],
-            responsive: true
         });
-        new $.fn.dataTable.FixedHeader(table);
-
-        document.getElementById('submit').onClick(function(e){
-            e.preventDefault();
-        });
-    });
     </script>
 </body>
 
