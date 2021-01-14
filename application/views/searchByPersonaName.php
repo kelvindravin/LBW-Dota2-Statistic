@@ -31,11 +31,23 @@
                             <td>' . $value->personaname . '</td>
                             <td><img src="' . $value->avatarfull . '" width=100 height=100/></td>
                             <td>' . $value->account_id . '</td>
-                            <td><a href="selectSteamID?id='. $value->account_id . '" class="btn btn-success">Pilih</a></td>
+                            <td></td>
                         </tr>
                     ';
                     }
                     ?>
+                    <?php 
+                    foreach($persona_data as $row){ ?>
+                    <tr>
+                        <td><?=$row->personaname?></td>
+                        <td style="padding:0"><img src ="<?=$row->avatarfull?>" class="img-fluid mx-auto d-block" ></td>
+                        <td><?=empty($row->last_match_time)?'tidak tersedia':date_format(new DateTime($row->last_match_time),'Y-m-d H:i:s')?></td>
+                        <td><?=$row->account_id?></td>
+                        <td>
+                        <a href="selectSteamID?id=<?=$value->account_id?>">Pilih</a>
+                        </td>
+                    </tr>
+                    <?php }?>
                 </tbody>
             </table>
         </div>
