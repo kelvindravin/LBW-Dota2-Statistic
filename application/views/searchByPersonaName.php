@@ -19,23 +19,12 @@
                     <tr>
                         <th>Persona Name</th>
                         <th>Profile Picture</th>
+                        <th>Last Matches</th>
                         <th>Account Id</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    foreach ($persona_data as $key => $value) {
-                        echo '
-                        <tr>
-                            <td>' . $value->personaname . '</td>
-                            <td><img src="' . $value->avatarfull . '" width=100 height=100/></td>
-                            <td>' . $value->account_id . '</td>
-                            <td></td>
-                        </tr>
-                    ';
-                    }
-                    ?>
                     <?php 
                     foreach($persona_data as $row){ ?>
                     <tr>
@@ -44,7 +33,7 @@
                         <td><?=empty($row->last_match_time)?'tidak tersedia':date_format(new DateTime($row->last_match_time),'Y-m-d H:i:s')?></td>
                         <td><?=$row->account_id?></td>
                         <td>
-                        <a href="selectSteamID?id=<?=$value->account_id?>">Pilih</a>
+                        <a href="selectSteamID?id=<?=$row->account_id?>">Pilih</a>
                         </td>
                     </tr>
                     <?php }?>

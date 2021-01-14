@@ -11,12 +11,13 @@ class C_Search_by_name extends CI_Controller
     }
 
     public function loadSearchByName(){
-        $getQueryString = $this->input->post('playerpersona');
+        $getQueryString = $this->input->post('playerpersona');        
+        $this->data['persona_searched'] = $getQueryString;
+        $getQueryString = rawurlencode($getQueryString);
         $response = file_get_contents("https://api.opendota.com/api/search?q=" . $getQueryString);
         $this->data["persona_data"] = json_decode($response);
         $this->data['current_nav'] = "searchByPersona";
-        $this->data['persona_searched'] = $getQueryString;
-
+        
         $this->load->view('header');
         $this->load->view('navbar',$this->data);
         $this->load->view('searchByPersonaName',$this->data);
