@@ -30,7 +30,7 @@
                     <tr>
                         <td><?=$row->personaname?></td>
                         <td style="padding:0"><img src ="<?=$row->avatarfull?>" class="img-fluid mx-auto d-block" ></td>
-                        <td><?=empty($row->last_match_time)?'tidak tersedia':date_format(new DateTime($row->last_match_time),'Y-m-d H:i:s')?></td>
+                        <td><?=empty($row->last_match_time)?'tidak tersedia':date_format(new DateTime($row->last_match_time),'d-m-Y H:i:s')?></td>
                         <td><?=$row->account_id?></td>
                         <td>
                         <a href="selectSteamID?id=<?=$row->account_id?>">Pilih</a>
@@ -43,7 +43,8 @@
     </content>
     <script type="text/javascript">
         $(document).ready(function() {
-            var table = $('#tablePersonaName').DataTable({
+            var table = $('#tablePersonaName').DataTable({                
+                order:[],
                 responsive: true
             });
 
