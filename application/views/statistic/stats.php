@@ -24,8 +24,14 @@
                     <hr>
                     <div class="card-body">
                         <img src="./assets/images/Stats/Gold.png" class="mb-3">
+                        <?php if( $stats[4]['n'] <= 400){?>
                         <p class="card-text">You have snagged <span class="text-success"><?php echo $stats[4]['n']; ?> </span> gold per minute.
-                            Ooohhhh shiny!</p>
+                            it's below average! Git gud</p>
+                        <?php 
+                        }else{ ?>
+                        <p class="card-text">You have snagged <span class="text-success"><?php echo $stats[4]['n']; ?> </span> gold per minute. 
+                            Ooohhhh shiny! You should join pro team</p>
+                        <?php } ?>
                     </div>
                 </div>
 
@@ -65,7 +71,11 @@
                     <hr>
                     <div class="card-body">
                         <img src="./assets/images/Stats/xp.png" class="mb-3">
-                        <p class="card-text">You have received <span class="text-success"><?php echo $stats[5]['n']; ?> </span> xp per minute. The more you know!
+                        <?php if($stats[5]['n'] <= 500){ ?>
+                            <p class="card-text">You have received <span class="text-success"><?php echo $stats[5]['n']; ?> </span> xp per minute. The more you know! It's really low you're slow learner huh?
+                        <?php }else{ ?>
+                            <p class="card-text">You have received <span class="text-success"><?php echo $stats[5]['n']; ?> </span> xp per minute. The more you know! You're above average nice.
+                        <?php }?>
                     </div>
                 </div>
 
