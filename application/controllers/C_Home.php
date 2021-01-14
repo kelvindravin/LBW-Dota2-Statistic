@@ -30,4 +30,12 @@ class C_Home extends CI_Controller
         $this->load->view('heroes',$this->data);
         $this->load->view('footer');
     }
+
+    public function loadAbout(){
+        $this->data['current_nav'] = "about";
+        $this->load->view('header');
+        $this->load->view('navbar',$this->data);
+        $this->load->view('about');
+        $this->load->view('footer');
+    }
 }
