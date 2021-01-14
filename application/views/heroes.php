@@ -6,7 +6,10 @@
     <title>Dota 2 Statistics - Heroes</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100" style="
+    background-image: url('https://i.pinimg.com/originals/0d/91/db/0d91dbf119a1c9f4cf500aaf7e695539.jpg');
+    background-attachment:fixed;
+    ">
     <header>
         <h1 class="text-center">
             Heroes of Dota 2 

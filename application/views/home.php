@@ -19,7 +19,7 @@
     </header>
 
     <content>
-        <div class="container mt-5 text-white" style=" color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
+        <div class="container mt-5" style=" color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
             <div class="mt-5">
                 <h4 class="text-center">Cari Player Berdasarkan Dota 2 PlayerID</h4>
                 <form action="searchByID" class="text-center mt-3" enctype="multipart/form-data" method="post">
