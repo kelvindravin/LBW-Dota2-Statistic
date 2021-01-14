@@ -18,17 +18,6 @@
 
     <content>
         <div class="container mt-5">
-            <h4 class="text-center">Tentang Dota 2 Statistic</h4>
-            <p align="justify" class="mt-3">
-                Dota 2 merupakan sebuah multiplayer online battle arena (MOBA) yang dipublikasi oleh
-                Valve. DImana permainan ini akan dimainkan oleh kedua belah tim yang dikategorikan sebagai
-                Radiant ataupun Dire, dimana kedua tim ini memiliki tujuan utama untuk menghancurkan
-                “Ancient” dari lawannya. Video game ini menduduki peringkat dua (sumber:
-                <a href="https://steamcharts.com/">Steam Charts</a>) dalam popularitas video game yang dimiliki oleh steam, dengan
-                jumlah pemain yang pernah terdaftar mencapai sebelas juta pemain individual. Oleh karena itu,
-                dibutuhkan suatu sistem untuk mencari suatu statistic dari seorang player. Berdasarkan kebutuhan itulah, Dota 2 Statistic ini ada.
-            </p>
-
             <div class="mt-5">
                 <h4 class="text-center">Cari Player Berdasarkan Dota 2 PlayerID</h4>
                 <form action="searchByID" class="text-center mt-3" enctype="multipart/form-data" method="post">
