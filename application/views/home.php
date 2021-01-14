@@ -6,18 +6,20 @@
     <title>Dota 2 Statistics - Home</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100" style="
+      background-image: url('https://i.pinimg.com/originals/0d/91/db/0d91dbf119a1c9f4cf500aaf7e695539.jpg');
+    ">
     <?php if ($this->session->flashdata('error')) { ?>
         <div class="alert alert-danger"> <?= $this->session->flashdata('error') ?> </div>
     <?php } ?>
     <header>
-        <h1 class="text-center mt-5">
+        <h1 class="text-center mt-5 text-white">
             Welcome to Dota 2 Statistics
         </h1>
     </header>
 
     <content>
-        <div class="container mt-5">
+        <div class="container mt-5 text-white">
             <div class="mt-5">
                 <h4 class="text-center">Cari Player Berdasarkan Dota 2 PlayerID</h4>
                 <form action="searchByID" class="text-center mt-3" enctype="multipart/form-data" method="post">
