@@ -6,7 +6,8 @@
     <title>Dota 2 Statistics - About</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100" style="
+      background-image: url('https://i.pinimg.com/originals/0d/91/db/0d91dbf119a1c9f4cf500aaf7e695539.jpg'); color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
     <h1 class="text-center mt-5">Tentang Dota 2 Statistic</h1>
         <div class="container mt-5">
             <h3 align="justify" class="mt-5">
