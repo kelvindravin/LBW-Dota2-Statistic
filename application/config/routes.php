@@ -7,6 +7,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['home'] = 'C_Home/loadHome';
 $route['heroes'] = 'C_Home/loadHero';
+$route['about'] = 'C_Home/loadAbout';
 
 $route['searchByID'] = 'C_Statistic/findUserByID';
 
