@@ -13,13 +13,13 @@
         <div class="alert alert-danger"> <?= $this->session->flashdata('error') ?> </div>
     <?php } ?>
     <header>
-        <h1 class="text-center mt-5 text-white">
+        <h1 class="text-center mt-5 text-white" style=" color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
             Welcome to Dota 2 Statistics
         </h1>
     </header>
 
     <content>
-        <div class="container mt-5 text-white">
+        <div class="container mt-5 text-white" style=" color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
             <div class="mt-5">
                 <h4 class="text-center">Cari Player Berdasarkan Dota 2 PlayerID</h4>
                 <form action="searchByID" class="text-center mt-3" enctype="multipart/form-data" method="post">
