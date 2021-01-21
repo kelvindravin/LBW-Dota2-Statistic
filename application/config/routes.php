@@ -18,3 +18,5 @@ $route['matches'] = 'C_Statistic/loadMatches';
 $route['changeID'] = 'C_Statistic/changeID';
 
 $route['stats'] = 'C_Statistic/loadStats';
+$route['compareByID'] = 'C_Statistic/findComparatorByID';
+$route['compareByPersonaName'] = 'C_Statistic/loadComparationStatsByName';
