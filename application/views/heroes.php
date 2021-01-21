@@ -11,7 +11,7 @@
     background-attachment:fixed;
     ">
     <header>
-        <h1 class="text-center">
+        <h1 class="text-center" style="color: white;">
             Heroes of Dota 2 
         </h1>
     </header>

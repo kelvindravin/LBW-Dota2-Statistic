@@ -19,11 +19,11 @@
             <div class="text-center">
                 <form action="compareByID" class="" enctype="multipart/form-data" method="post">
                     <input type="text" id="playerid" name="playerid" placeholder="Dota 2 Player ID" required>
-                    <input type="submit" value="Cari">
+                    <input type="submit" class="btn btn-info"  value="Cari">
                 </form>
                 <form action="compareByPersonaName" class="text-center mt-3" enctype="multipart/form-data" method="post">
                     <input type="text" id="playerpersona" name="playerpersona" placeholder="Dota 2 Persona Name" required>
-                    <input type="submit" value="Cari">
+                    <input type="submit" class="btn btn-info"  value="Cari">
                 </form>
             </div>
         </div>
