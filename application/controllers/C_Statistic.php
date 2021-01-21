@@ -46,7 +46,12 @@ class C_Statistic extends CI_Controller
             $idToHeroName[$row->id] =  $row->localized_name;
         }
         foreach($response as $key => $row){
-            $response[$key]['heroes'] = $idToHeroName[$row['hero_id']];
+            if(array_key_exists($row['hero_id'],$idToHeroName)){
+                $response[$key]['heroes'] = $idToHeroName[$row['hero_id']];
+            }
+            else{
+                $response[$key]['heroes'] = "undefined";
+            }
         }
 
         $this->data['matches'] = $response;
