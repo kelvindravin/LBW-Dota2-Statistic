@@ -38,8 +38,18 @@ class C_Statistic extends CI_Controller
         $id = $data["profile"]["account_id"];
         $this->data['current_nav'] = "matches";
 
-        $response = file_get_contents('https://api.opendota.com/api/players/' . $id . '/matches');
-        $this->data['matches'] = json_decode($response, true);
+        $response = json_decode(file_get_contents('https://api.opendota.com/api/players/' . $id . '/matches'),true);
+        $heroIdToName = json_decode(file_get_contents('https://api.opendota.com/api/heroes'));
+        
+        $idToHeroName=array();
+        foreach($heroIdToName as $row){
+            $idToHeroName[$row->id] =  $row->localized_name;
+        }
+        foreach($response as $key => $row){
+            $response[$key]['heroes'] = $idToHeroName[$row['hero_id']];
+        }
+
+        $this->data['matches'] = $response;
         if (sizeof($this->data['matches']) > 0) {
             $this->load->view('header');
             $this->load->view('statistic/navbarStatistic',$this->data);

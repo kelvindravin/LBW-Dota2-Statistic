@@ -47,7 +47,7 @@
                             <td>' . date('d-m-Y H:i:s',$tanggal) . ' WIB</td>
                             <td>' . gmdate("H:i:s", $matches[$i]['duration']) . '</td>
                             <td>' . $winner . '</td>
-                            <td>' . $matches[$i]['hero_id'] . '</td>
+                            <td>' . $matches[$i]['heroes'] . '</td>
                             <td>' . $matches[$i]['kills'] .'/'. $matches[$i]['deaths'] .'/'. $matches[$i]['assists'] . '</td>
                         </tr>
                     ';
